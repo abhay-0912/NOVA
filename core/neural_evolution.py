@@ -23,7 +23,7 @@ from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).parent.parent))
 
-from core.memory import NOVAMemory
+from core.memory import MemorySystem
 
 
 @dataclass
@@ -67,7 +67,7 @@ class UserInteractionProfile:
 class NeuroEvolutionEngine:
     """Core engine for NOVA's self-learning and evolution capabilities"""
     
-    def __init__(self, memory_system: NOVAMemory):
+    def __init__(self, memory_system: MemorySystem):
         self.memory = memory_system
         self.logger = logging.getLogger("nova.evolution")
         

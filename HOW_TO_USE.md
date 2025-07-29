@@ -58,7 +58,22 @@ cd NOVA
 ./scripts/start.sh
 ```
 
-### Step 3: Say Hello! 👋
+### Step 3: Verify Installation ✅
+Test that NOVA is working correctly:
+```bash
+# Quick installation check
+python check_installation.py
+
+# Test basic functionality
+python main.py --help
+
+# Test God Mode (should see "✅ Result" at the end)
+python main.py --god-mode "Hello NOVA! Test your functionality."
+```
+
+**Expected output:** You should see NOVA start up (possibly with some warnings - this is normal) and then execute your command successfully.
+
+### Step 4: Say Hello! 👋
 Once NOVA starts, you'll see a friendly interface. Try typing:
 ```
 Hello NOVA! Can you introduce yourself?
@@ -256,9 +271,28 @@ ping google.com
 - Use simple language
 - Try rephrasing your request
 
-#### ⚠️ "Next-gen capabilities not available" warning
+#### ⚠️ Common Warnings (Normal - You Can Ignore These)
+**These warnings are normal and NOVA will still work perfectly:**
+
+- `ChromaDB not available, using fallback memory system` - Using simpler memory, still functional
+- `Next-gen capabilities not available` - Advanced features not loaded, basic features work fine
+- `Security alert: Port X is open` - Security monitoring is working as intended
+
+**Solution:** These are informational warnings. NOVA functions normally with fallback systems.
+
+#### ❌ "ModuleNotFoundError: No module named 'yaml'" **[FIXED]**
 **Solution:**
-This is normal - it means some advanced features aren't loaded, but NOVA will still work perfectly for most tasks. You can ignore this warning.
+```bash
+# Install missing dependencies
+pip install pyyaml numpy
+
+# Or reinstall everything
+.\scripts\install.bat    # Windows
+./scripts/install.sh     # Mac/Linux
+```
+
+#### ❌ "ChromaDB configuration errors" **[FIXED]**
+**Solution:** This has been automatically fixed in the latest version. NOVA now uses the updated ChromaDB API.
 
 ### 🆘 Getting Help
 

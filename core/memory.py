@@ -13,7 +13,6 @@ from typing import Dict, List, Optional, Any, Tuple
 from dataclasses import dataclass, asdict
 try:
     import chromadb
-    from chromadb.config import Settings
     CHROMADB_AVAILABLE = True
 except ImportError:
     CHROMADB_AVAILABLE = False
@@ -60,10 +59,10 @@ class MemorySystem:
             
             # Initialize ChromaDB for vector storage (if available)
             if CHROMADB_AVAILABLE:
-                self.chroma_client = chromadb.Client(Settings(
-                    chroma_db_impl="duckdb+parquet",
-                    persist_directory="data/chroma_db"
-                ))
+                # Use new ChromaDB API
+                self.chroma_client = chromadb.PersistentClient(
+                    path="data/chroma_db"
+                )
                 
                 self.memory_collection = self.chroma_client.get_or_create_collection(
                     name="nova_memories",

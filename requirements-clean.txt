@@ -1,0 +1,17 @@
+# NOVA - Professional AI Assistant
+# Clean, minimal requirements for production use
+
+# Core Dependencies
+aiohttp>=3.8.0
+python-dotenv>=1.0.0
+
+# AI Providers (optional - install only what you need)
+google-generativeai>=0.3.0  # For Gemini AI
+openai>=1.0.0               # For OpenAI GPT
+anthropic>=0.7.0            # For Anthropic Claude
+
+# Development Dependencies (optional)
+pytest>=7.0.0               # For testing
+black>=22.0.0               # For code formatting
+isort>=5.0.0                # For import sorting
+mypy>=1.0.0                 # For type checking

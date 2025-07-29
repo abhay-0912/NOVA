@@ -31,7 +31,7 @@ try:
         print(f"❌ Agent Orchestrator - FAILED: {e}")
     
     try:
-        from core.memory import NOVAMemory
+        from core.memory import MemorySystem
         print("✅ Memory System - OK")
     except Exception as e:
         print(f"❌ Memory System - FAILED: {e}")
