@@ -1,0 +1,135 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# NOVA specific
+data/nova_memory.db
+data/chroma_db/
+logs/
+cache/
+backups/
+temp/
+*.log
+
+# Configuration with secrets
+config/secrets.yaml
+config/local.yaml
+.env.local
+.env.production
+
+# Test databases
+test_memory.db
+test_*.db
+
+# API keys and secrets
+*.key
+*.pem
+*.crt
+secrets.json
+
+# Node.js (for web interfaces)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Tauri (desktop app)
+interfaces/desktop/src-tauri/target/
+interfaces/desktop/dist/
+
+# Flutter (mobile app)
+interfaces/mobile/build/
+interfaces/mobile/.flutter-plugins-dependencies
+interfaces/mobile/.dart_tool/
+
+# Docker
+.dockerignore
+
+# Monitoring
+monitoring/data/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# PyBuilder
+target/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

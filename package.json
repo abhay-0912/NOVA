@@ -1,0 +1,49 @@
+{
+  "name": "nova",
+  "version": "0.1.0",
+  "description": "Neural Omnipresent Virtual Assistant - A self-evolving, omnipresent, multi-agent AI assistant",
+  "main": "src/main.py",
+  "scripts": {
+    "dev": "python src/main.py --dev",
+    "start": "python src/main.py",
+    "test": "pytest tests/",
+    "lint": "flake8 src/ tests/",
+    "format": "black src/ tests/",
+    "type-check": "mypy src/",
+    "install": "pip install -r requirements.txt",
+    "docker-build": "docker build -t nova .",
+    "docker-run": "docker run -p 8000:8000 nova",
+    "web-dev": "cd interfaces/web && npm run dev",
+    "web-build": "cd interfaces/web && npm run build",
+    "desktop-dev": "cd interfaces/desktop && npm run tauri dev",
+    "desktop-build": "cd interfaces/desktop && npm run tauri build",
+    "mobile-dev": "cd interfaces/mobile && flutter run",
+    "mobile-build": "cd interfaces/mobile && flutter build",
+    "setup": "./scripts/setup.sh",
+    "agents-start": "python -m core.orchestrator",
+    "security-scan": "python -m security.scanner --full",
+    "backup": "python -m data.backup",
+    "restore": "python -m data.restore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhay-0912/NOVA.git"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "multi-agent",
+    "automation",
+    "cybersecurity",
+    "productivity",
+    "voice",
+    "vision",
+    "privacy"
+  ],
+  "author": "Abhay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhay-0912/NOVA/issues"
+  },
+  "homepage": "https://github.com/abhay-0912/NOVA#readme"
+}

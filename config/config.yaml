@@ -1,0 +1,85 @@
+# NOVA Configuration File
+# This file defines the core configuration for NOVA
+
+nova:
+  name: "NOVA"
+  version: "0.1.0"
+  personality: "assistant"
+  debug_mode: false
+
+# API Configuration
+api:
+  host: "localhost"
+  port: 8000
+  cors_enabled: true
+  docs_enabled: true
+  websocket_enabled: true
+
+# Storage Configuration
+storage:
+  data_dir: "./data"
+  cache_dir: "./cache"
+  logs_dir: "./logs"
+  backup_dir: "./backups"
+  max_memory_mb: 512
+  retention_days: 30
+
+# Security Configuration
+security:
+  real_time_monitoring: true
+  auto_threat_response: true
+  data_encryption: true
+  security_level: "high"
+  scan_interval_minutes: 30
+  threat_response_enabled: true
+
+# Capabilities Configuration
+capabilities:
+  voice_enabled: true
+  vision_enabled: true
+  security_enabled: true
+  learning_enabled: true
+  god_mode_enabled: true
+  multi_agent_enabled: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_enabled: true
+  console_enabled: true
+  max_file_size_mb: 10
+  backup_count: 5
+
+# Agent Configuration
+agents:
+  max_concurrent: 5
+  timeout_seconds: 300
+  retry_attempts: 3
+  enabled_agents:
+    - research
+    - developer
+    - cybersec
+    - general
+
+# Interface Configuration
+interfaces:
+  cli_enabled: true
+  web_enabled: true
+  api_enabled: true
+  websocket_enabled: true
+
+# AI Model Configuration
+models:
+  default_model: "gpt-3.5-turbo"
+  fallback_model: "local"
+  local_model_path: "./models"
+  temperature: 0.7
+  max_tokens: 2048
+
+# Integration Configuration
+integrations:
+  openai_enabled: false
+  anthropic_enabled: false
+  local_llm_enabled: true
+  vector_db_enabled: true
